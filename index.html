@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern HTML5 & CSS3 for Structure & Styling of Webpage">
+    <title>HTML 5 & CSS 3</title>
+    <style>
+        body {
+            background-color: white;
+            color: black;
+            lighting-color: aqua;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            height: 30px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: black;
+        }
+
+        .darkmode {
+            background-color: black;
+            color: white;
+        }
+
+        figure {
+            float: left;
+            padding-left: 0;
+            margin-left: 0;
+        }
+
+        figure picture img {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        figure figcaption {
+            text-align: center;
+        }
+
+        video {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            transition: ease-in-out 03s;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        footer {
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+            background-color: black;
+            color: white;
+            height: 50px;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .white {
+            color: white;
+        }
+
+        aside {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin: 0px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to HTML 5</h1>
+        <nav>
+            <ul>
+                <li><a href="Javascript.html" id="white">Javascript</a></li>
+                <li><a href="#About" id="white">About us</a></li>
+                <li><a href="#Service" id="white">Service</a></li>
+                <li><a href="#Contact" id="white">Contact</a></li>
+                <li><button id="mode" onclick="mode()">Dark Theme</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="About">
+            <article>
+                <h2>About us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam ut magnam vel deserunt ducimus maiores
+                    repellat dolores neque veritatis quis illum fugiat, pariatur consequatur at non natus numquam!
+                    Praesentium, cumque.
+                    Voluptatibus explicabo cum dolore consequatur ea porro veniam ipsa amet, magni doloremque sint quo
+                    facere totam, quis eius vero, rem praesentium ut adipisci maiores non quam. Optio accusamus dolore
+                    necessitatibus.
+                    Commodi cum, eligendi similique quae, nobis magnam aliquam architecto tempora, mollitia consequatur
+                    harum. Error unde quos perspiciatis voluptate excepturi quod laboriosam ducimus impedit veniam! Ipsa
+                    ad doloribus iure hic facilis!
+                </p>
+            </article>
+        </section>
+        <!-- <section id="Service">
+            <article>
+                <br><br><br>
+                <h3>Services as a Multimedia</h3>
+                <h4>Video Element</h4>
+                <video controls>
+                    <source
+                        src="F:\Private\Aditya Personal\Adi Clg\V V Shah\Dwarka tour with other friends\scuba diving\Tag 29-1.mp4"
+                        type="video/mp4">Your browser doesn't support Video tag
+                </video>
+
+                <br><br><br><br>
+                <h4>Audio Element</h4>
+                <audio controls>
+                    <source src="F:\Aditya\USB Drive\Bhajan\Achyutam Keshavam Krishna Damodaram.mp3" type="Audio/mp3">
+                    Your browser doesn't support audio tag
+                </audio>
+
+                <figure>
+                    <picture>
+                        <source media="(min-width: 800px)" srcset="Assets/Image/gls.jpg">
+                        <source media="(min-width: 400px)" srcset="Assets/Image/gls.jpg">
+                        <img src="C:\Users\patel\Desktop\Time Table.jpg" alt="Our Services Image">
+                    </picture>
+                    <figcaption>Above image is of GLS University</figcaption>
+                </figure>
+            </article>
+
+        </section> -->
+        <hr>
+        <section id="Contact">
+            <h2>Contact Us</h2>
+            <form action="/submit-form" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <br>
+                <label for="subscribe">Subscribe to Newsletter:</label>
+                <input type="checkbox" id="subscribe" name="subscribe">
+                <br><br>
+                <button type="submit">Submit</button>
+                <button type="reset">reset</button>
+            </form>
+        </section>
+    </main>
+    <br><br><br>
+    <!-- Semantic Footer -->
+    <footer>
+        <p>&copy; 2024 My HTML5 Webpage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const button = document.getElementById("mode");
+        button.addEventListener("click", () => {
+            document.body.classList.toggle("darkmode");
+            document.querySelectorAll("a").forEach(link => { link.classList.toggle("white"); })
+        })
+    </script>
+</body>
+
+</html>
