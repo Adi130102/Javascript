@@ -23,6 +23,7 @@
    let z = NaN;     // Not a Number
 
    console.log(x, y + " & " + z);
+   
 
 // b) String
 //    - Represents text data enclosed in quotes (single, double, or backticks for template literals).
