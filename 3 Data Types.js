@@ -3,8 +3,10 @@
 //     primitive data types
 //     non-primitive data types
 
+// Primitive types : `Number`, `String`, `Boolean`, `Undefined`, `Null`, `Symbol`, `BigInt`
+// Non-Primitive types : `Object` (including `Array`, `Function`, `Date`)
 
-// 1. **Primitive Data Types**
+// 1. Primitive Data Types
 // Primitive data types represent simple, immutable values. 
 // They are not objects and don't have methods.
 
@@ -62,71 +64,74 @@
     let sym = Symbol('unique');
     console.log(sym);  // Outputs: null
 
-// #### g) **BigInt** (ES2020)
+// g) BigInt (ES2020)
 //    - Used for arbitrarily large integers. It can represent numbers larger than the `Number` type can handle.
 //    - Example: `123n`, `BigInt(123)`
 
-//    **Example**:
-//    ```javascript
-//    let bigNumber = 1234567890123456789012345678901234567890n;
-//    ```
+   let bigNumber = 1234567890123456789012345678901234567890n;
+   console.log(bigNumber);
 
-// ### 2. **Non-Primitive Data Types (Objects)**
+// 2. Non-Primitive Data Types (Objects)
 // Non-primitive data types are objects. Objects are mutable and store collections of data or more complex entities.
 
-// #### a) **Object**
+//  a) Object
 //    - A collection of key-value pairs, where values can be any data type.
 //    - Example:
-//      ```javascript
-//      let person = {
-//          name: "Aditya",
-//          age: 22,
-//          isStudent: true
-//      };
-//      ```
 
-// #### b) **Array**
+     let person = {
+         name: "Aditya",
+         age: 22,
+         isStudent: true
+     };
+
+     console.log(person)
+
+// b) Array
 //    - A special type of object used to store lists of values (indexed by numbers).
 //    - Example:
-//      ```javascript
-//      let colors = ["red", "green", "blue"];
-//      ```
 
-// #### c) **Function**
+     let colors = ["red", "green", "blue"];
+     console.log(colors)
+
+     let car = {model:"Amaze",color:"White"};
+     console.log(car)
+
+// c) Function
 //    - In JavaScript, functions are objects. They can be assigned to variables, passed as arguments, or returned from other functions.
 //    - Example:
-//      ```javascript
-//      function greet() {
-//          return "Hello";
-//      }
-//      ```
 
-// #### d) **Date**
+     function greet() {
+         return "Hello";
+     }
+
+     console.log(greet);
+
+// d) Date
 //    - A built-in object for handling dates and times.
 //    - Example:
-//      ```javascript
-//      let currentDate = new Date();
-//      ```
 
-// ### 3. **Special Types**
-// #### a) **Array**
+     let currentDate = new Date();
+     console.log(currentDate)
+
+// 3. Special Types
+// a) Array
 //    - Arrays in JavaScript are objects but with special methods and properties to work with ordered collections of values.
 //    - Example:
-//      ```javascript
-//      let numbers = [1, 2, 3];
-//      ```
 
-// #### b) **Function**
+     let numbers = [1, 2, 3];
+     console.log(numbers)
+
+//  b) Function
 //    - Functions are a special type of object in JavaScript. They can be assigned to variables, passed as arguments, and returned from other functions.
 //    - Example:
-//      ```javascript
-//      function add(a, b) {
-//          return a + b;
-//      }
-//      ```
+     function add(a, b) {
+         return a + b;
+     }
 
-// // ### Type Detection
-// // To check the type of a value, you can use the `typeof` operator.
+     console.log(add)
+
+// Type Detection
+// To check the type of a value, you can use the `typeof` operator.
 
 console.log(typeof 42);           // "number"
 console.log(typeof "hello");      // "string"
@@ -138,7 +143,3 @@ console.log(typeof 123n);         // "bigint"
 console.log(typeof {});           // "object"
 console.log(typeof []);           // "object" (arrays are also objects)
 console.log(typeof function(){}); // "function"
-
-// ### Summary:
-// - **Primitive types**: `Number`, `String`, `Boolean`, `Undefined`, `Null`, `Symbol`, `BigInt`
-// - **Non-Primitive types**: `Object` (including `Array`, `Function`, `Date`)
